@@ -11,11 +11,11 @@ public class Electrician : MonoBehaviour
     GUIStyle BoxStyle = new GUIStyle();
     public Vector3 HitLoc = Vector3.zero;
     public LineRenderer RopeRenderer;
-    Outline ActiveOutline = null;
+    OutlineComponent ActiveOutline = null;
 
     int IgnoreMask = 0;
     RaycastHit HitInfo;
-    Wire CurrentWire = null;
+    WireComponent CurrentWire = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +43,7 @@ public class Electrician : MonoBehaviour
         Transform CameraTransform = Camera.main.transform;
         if (Physics.Raycast(CameraTransform.position, CameraTransform.forward, out HitInfo, 1000.0f, IgnoreMask, QueryTriggerInteraction.Ignore))
         {
-            DeviceInputOutput DevicePlug = HitInfo.collider.GetComponentInChildren<DeviceInputOutput>();
+            DeviceInputOutputComponent DevicePlug = HitInfo.collider.GetComponentInChildren<DeviceInputOutputComponent>();
 
             if (CurrentWire)
             {
@@ -62,7 +62,7 @@ public class Electrician : MonoBehaviour
             else if (DevicePlug)
             {
                 GameObject WireObject = new GameObject();
-                CurrentWire = WireObject.AddComponent<Wire>();
+                CurrentWire = WireObject.AddComponent<WireComponent>();
                 if (CurrentWire.AttachTo(DevicePlug))
                 {
                     Debug.Log("Wire Created");

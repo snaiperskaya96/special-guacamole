@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DevicePassThrough : DeviceOutput
+public class DevicePassThroughComponent : DeviceOutputComponent
 {
     protected override string GetText()
     {

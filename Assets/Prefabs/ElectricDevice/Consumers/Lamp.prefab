@@ -199,8 +199,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7351806955147153047}
-  - component: {fileID: 1750305353747551558}
-  - component: {fileID: 5069450124076727701}
+  - component: {fileID: 2904178649688943278}
+  - component: {fileID: 734920500966955443}
+  - component: {fileID: 286281034725615390}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -223,7 +224,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1750305353747551558
+--- !u!114 &2904178649688943278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,14 +233,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6394919918312705981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e979ee28f19a6c542babd6d3472c0633, type: 3}
+  m_Script: {fileID: 11500000, guid: 50e7bc0ed360df4458ae2ff16308c316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OutlineMaterial: {fileID: 2100000, guid: 67589f044cc57144c9d922833c879cb3, type: 2}
   CloneObject: {fileID: 0}
   Size: 1.01
   Color: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &5069450124076727701
+--- !u!114 &734920500966955443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,13 +249,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6394919918312705981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd557a976a6fc8d4e82f71f21d46be4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d1d6ab0276fbf84ca3b67e62a0d48e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &286281034725615390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6394919918312705981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ee02e7d4666584495ce673c9515480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Inputs:
   - {fileID: 8964901146707051124}
   Outputs: []
-  PassThrough: {fileID: 5350329634048702955}
+  PassThrough: {fileID: 3739687620606960095}
   PowerOutput: 0
   RequiredPower: 10
   ShowDebugInfo: 0
@@ -494,15 +507,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048e96890efb5ac46b030ec162b7d1f1, type: 3}
---- !u!114 &5350329634048702955 stripped
+--- !u!114 &3739687620606960095 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1139623770767744898, guid: 048e96890efb5ac46b030ec162b7d1f1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8536286875511424950, guid: 048e96890efb5ac46b030ec162b7d1f1, type: 3}
   m_PrefabInstance: {fileID: 5012772176739444329}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2888e7c9308b78743979a38e27e87087, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fc7dbbb4dc50594caab3d79df97bc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8519709110911011931
@@ -574,6 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9168025262735676037, guid: 63567a46be370194ca955e19e7b59625, type: 3}
+    - {fileID: 9027821223279859799, guid: 63567a46be370194ca955e19e7b59625, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 63567a46be370194ca955e19e7b59625, type: 3}
 --- !u!4 &8964901146707051124 stripped
 Transform:

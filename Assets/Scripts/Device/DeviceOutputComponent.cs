@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeviceOutput : DeviceInputOutput
+public class DeviceOutputComponent : DeviceInputOutputComponent
 {
     public float OutputPower = 0.0f;
 

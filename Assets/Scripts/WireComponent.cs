@@ -4,15 +4,15 @@ using UnityEngine;
 using System.Linq;
 
 [RequireComponent(typeof(LineRenderer))]
-public class Wire : MonoBehaviour
+public class WireComponent : MonoBehaviour
 {
     int WireEndIndex = 0;
-    DeviceInputOutput[] WireEnds = new DeviceInputOutput[2];
+    DeviceInputOutputComponent[] WireEnds = new DeviceInputOutputComponent[2];
     List<Vector3> WirePoints = new List<Vector3>();
     LineRenderer WireRenderer = null;
 
-    DeviceInputOutput Input = null;
-    DeviceInput Output = null;
+    DeviceInputOutputComponent Input = null;
+    DeviceInputComponent Output = null;
 
     void Awake()
     {
@@ -38,7 +38,7 @@ public class Wire : MonoBehaviour
         WireRenderer.SetPosition(WireRenderer.positionCount - 1, Point);
     }
 
-    public bool AttachTo(DeviceInputOutput Device)
+    public bool AttachTo(DeviceInputOutputComponent Device)
     {
         if (WireEndIndex >= WireEnds.Length)
         {
@@ -55,8 +55,8 @@ public class Wire : MonoBehaviour
             return false;
         }
 
-        DeviceOutput DeviceAsOutput = Device as DeviceOutput;
-        DeviceInput DeviceAsInput = Device as DeviceInput;
+        DeviceOutputComponent DeviceAsOutput = Device as DeviceOutputComponent;
+        DeviceInputComponent DeviceAsInput = Device as DeviceInputComponent;
 
         // Avoid attaching to another output source if we already have one
         if (GetInputSlow() && DeviceAsOutput != null)
@@ -82,14 +82,14 @@ public class Wire : MonoBehaviour
         return true;
     }
 
-    DeviceInput GetOutputSlow()
+    DeviceInputComponent GetOutputSlow()
     {
-        return WireEnds.SingleOrDefault(x => x as DeviceInput != null) as DeviceInput;
+        return WireEnds.SingleOrDefault(x => x as DeviceInputComponent != null) as DeviceInputComponent;
     }
 
-    DeviceOutput GetInputSlow()
+    DeviceOutputComponent GetInputSlow()
     {
-        return WireEnds.SingleOrDefault(x => x as DeviceOutput != null) as DeviceOutput;
+        return WireEnds.SingleOrDefault(x => x as DeviceOutputComponent != null) as DeviceOutputComponent;
     }
 
     void Activate()
@@ -104,7 +104,7 @@ public class Wire : MonoBehaviour
         if (Input && Output)
         {
             // this is fucking with my brain so bad...
-            DeviceOutput InputDevice = Input as DeviceOutput;
+            DeviceOutputComponent InputDevice = Input as DeviceOutputComponent;
             if (InputDevice)
             {
                 Output.InputPower = InputDevice.OutputPower;

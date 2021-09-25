@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class InteractionControllerComponent : ElectricDevice
+public class InteractionControllerComponent : DeviceComponent
 {
     bool IsPowered = false;
     InteractorComponent FakeInteractor = null;

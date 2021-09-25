@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-[RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(OutlineComponent))]
 [RequireComponent(typeof(CombinedBoundsComponent))]
-public class DeviceInputOutput : MonoBehaviour
+public class DeviceInputOutputComponent : MonoBehaviour
 {
-    Outline DeviceOutline = null;
-    ElectricDevice ParentDevice = null;
+    OutlineComponent DeviceOutline = null;
+    DeviceComponent ParentDevice = null;
     CombinedBoundsComponent CombinedBounds = null;
     bool WithinRange = false;
     int IgnoreMask = 0;
@@ -24,9 +24,9 @@ public class DeviceInputOutput : MonoBehaviour
     // Start is called before the first frameupdate
     void Start()
     {
-        DeviceOutline = GetComponent<Outline>();
+        DeviceOutline = GetComponent<OutlineComponent>();
         CombinedBounds = GetComponentInChildren<CombinedBoundsComponent>();
-        ParentDevice = GetComponentInParent<ElectricDevice>();
+        ParentDevice = GetComponentInParent<DeviceComponent>();
 
         Assert.IsNotNull(DeviceOutline);
         Assert.IsNotNull(ParentDevice);

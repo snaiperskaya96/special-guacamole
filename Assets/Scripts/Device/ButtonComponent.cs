@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonComponent : ElectricDevice, IInteractable
+public class ButtonComponent : DeviceComponent, IInteractable
 {
     public float ActiveTime = 2.0f;
     public Vector3 PressedOffset = Vector3.zero;
@@ -15,6 +15,11 @@ public class ButtonComponent : ElectricDevice, IInteractable
 
     public void OnInteraction(InteractorComponent Interactor)
     {
+        if (IsPressed)
+        {
+            return;
+        }
+
         StartCoroutine(OnButtonPressed());
     }
 

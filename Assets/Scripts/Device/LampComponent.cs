@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Assertions;
 
-public class Lamp : ElectricDevice
+public class LampComponent : DeviceComponent
 {
     Light LightSource = null;
     Light BulbLight = null;

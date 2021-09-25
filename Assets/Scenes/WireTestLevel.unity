@@ -178,26 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8328965161771976618, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328965161771976618, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Range
-      value: 4.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328965161771976618, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Intensity
-      value: 15.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328965161771976618, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_SpotAngle
-      value: 54.191654
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328965161771976618, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
 --- !u!1001 &94212503
@@ -207,10 +187,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5029897318347549790, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6394919918312705981, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
       propertyPath: m_Name
       value: Lamp (3)
@@ -268,10 +244,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5029897318347549790, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6394919918312705981, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
       propertyPath: m_Name
       value: Lamp (4)
@@ -483,10 +455,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5029897318347549790, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6394919918312705981, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
       propertyPath: m_Name
       value: Lamp (1)
@@ -807,10 +775,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5029897318347549790, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6394919918312705981, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
       propertyPath: m_Name
       value: Lamp (5)
@@ -857,10 +821,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7351806955147153047, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328965161771976618, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1122,10 +1082,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5029897318347549790, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6394919918312705981, guid: 84ca0c9ebf75a1b4c8c8194075803766, type: 3}
       propertyPath: m_Name
       value: Lamp (2)

@@ -4,16 +4,16 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Assertions;
 
-[RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(OutlineComponent))]
 [RequireComponent(typeof(CombinedBoundsComponent))]
-public class ElectricDevice : MonoBehaviour
+public class DeviceComponent : MonoBehaviour
 {
     protected CombinedBoundsComponent CombinedBounds = null;
-    protected List<DeviceInput> DeviceInputs = new List<DeviceInput>();
-    protected List<DeviceOutput> DeviceOutputs = new List<DeviceOutput>();
+    protected List<DeviceInputComponent> DeviceInputs = new List<DeviceInputComponent>();
+    protected List<DeviceOutputComponent> DeviceOutputs = new List<DeviceOutputComponent>();
     public List<Transform> Inputs = new List<Transform>();
     public List<Transform> Outputs = new List<Transform>();
-    public DevicePassThrough PassThrough;
+    public DevicePassThroughComponent PassThrough;
     public float PowerOutput = 0.0f;
     public float RequiredPower = 0.0f;
     public bool ShowDebugInfo = false;
@@ -25,11 +25,12 @@ public class ElectricDevice : MonoBehaviour
 
         Assert.IsNotNull(CombinedBounds);
 
+        // This is a bit inconsistent with the passthrough pins as we don't create the component in runtime
         Inputs.ForEach(x =>
         {
             if (x && x.gameObject)
             {
-                var Component = x.gameObject.AddComponent<DeviceInput>();
+                var Component = x.gameObject.AddComponent<DeviceInputComponent>();
                 Component.RequiredPower = RequiredPower;
                 DeviceInputs.Add(Component);
             }
@@ -39,7 +40,7 @@ public class ElectricDevice : MonoBehaviour
         {
             if (x && x.gameObject)
             {
-                var Component = x.gameObject.AddComponent<DeviceOutput>();
+                var Component = x.gameObject.AddComponent<DeviceOutputComponent>();
                 Component.OutputPower = PowerOutput;
                 DeviceOutputs.Add(Component);
             }

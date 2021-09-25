@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Outline : MonoBehaviour
+public class OutlineComponent : MonoBehaviour
 {
     public Material OutlineMaterial = null;
     public GameObject CloneObject = null;
