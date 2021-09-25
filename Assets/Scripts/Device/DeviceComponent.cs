@@ -18,6 +18,8 @@ public class DeviceComponent : MonoBehaviour
     public float RequiredPower = 0.0f;
     public bool ShowDebugInfo = false;
 
+    protected float TotalInputPower { get { return DeviceInputs.Sum(x => x.InputPower); } }
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -51,9 +53,7 @@ public class DeviceComponent : MonoBehaviour
     {
         if (DeviceInputs.Count > 0)
         {
-            float InputPower = DeviceInputs.Sum(x => x.InputPower);
-
-            float PowerDelta = InputPower - RequiredPower;
+            float PowerDelta = TotalInputPower - RequiredPower;
 
             if (PowerDelta >= 0)
             {
@@ -61,7 +61,7 @@ public class DeviceComponent : MonoBehaviour
 
                 if (ShouldPassThrough())
                 {
-                    PassThrough.OutputPower = InputPower - RequiredPower;
+                    PassThrough.OutputPower = TotalInputPower - RequiredPower;
                 }
                 else if (PassThrough)
                 {
