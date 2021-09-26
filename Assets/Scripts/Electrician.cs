@@ -56,7 +56,8 @@ public class Electrician : MonoBehaviour
                 }
                 else
                 {
-                    CurrentWire.AddPoint(HitInfo.point);
+                    // Pull it back a little bit so it doesn't end up into the mesh
+                    CurrentWire.AddPoint(HitInfo.point - CameraTransform.forward * 0.02f);
                 }
             }
             else if (DevicePlug)
