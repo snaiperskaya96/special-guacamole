@@ -105,8 +105,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6261717040638723821}
-  - component: {fileID: 5211910189779358337}
-  - component: {fileID: 8369913118384084905}
+  - component: {fileID: 7450726779300154389}
+  - component: {fileID: 8445140337346003589}
+  - component: {fileID: 2919383472450623341}
   m_Layer: 0
   m_Name: SolarPanel
   m_TagString: Untagged
@@ -130,7 +131,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5211910189779358337
+--- !u!114 &7450726779300154389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,32 +140,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 9077229227058468346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69018f5ea88e3494ab8c3607a1508259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Inputs:
-  - {fileID: 0}
-  Outputs:
-  - {fileID: 6392249563531448295}
-  PassThrough: {fileID: 0}
-  PowerOutput: 1
-  RequiredPower: 0
---- !u!114 &8369913118384084905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9077229227058468346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e979ee28f19a6c542babd6d3472c0633, type: 3}
+  m_Script: {fileID: 11500000, guid: 50e7bc0ed360df4458ae2ff16308c316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OutlineMaterial: {fileID: 2100000, guid: 67589f044cc57144c9d922833c879cb3, type: 2}
   CloneObject: {fileID: 0}
   Size: 1.01
   Color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &8445140337346003589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077229227058468346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1d6ab0276fbf84ca3b67e62a0d48e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2919383472450623341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077229227058468346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81533cbb1abacaf45bc70ea5292bbb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inputs: []
+  Outputs: []
+  PassThrough: {fileID: 0}
+  PowerOutput: 0
+  RequiredPower: 0
+  ShowDebugInfo: 0
 --- !u!1001 &5971906456231199176
 PrefabInstance:
   m_ObjectHideFlags: 0
